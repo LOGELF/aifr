@@ -16,7 +16,11 @@
   
   <style>
     body { font-family: 'Inter', sans-serif; }
-  </style>
+  </style> 
+.custom-scroll-x::-webkit-scrollbar { height: 4px; }
+.custom-scroll-x::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+.custom-scroll-x::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.custom-scroll-x::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col justify-between py-6 px-4 sm:px-6 lg:px-8">
 
@@ -38,26 +42,31 @@
     </header>
 
     <!-- STATE SELECTION SLIDER -->
-    <section class="space-y-2">
-      <div class="flex items-center justify-between text-xs text-slate-500 px-1 font-semibold">
-        <span>SELECT STATE</span>
-        <span class="text-[10px] text-slate-400 flex items-center gap-1">
-          Scroll sideways <i data-lucide="arrow-right" class="w-3 h-3"></i>
-        </span>
-      </div>
-      <div class="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
-        <button onclick="selectState('ALL', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-red-600 bg-red-600 text-white shadow-sm">All States</button>
-        <button onclick="selectState('Assam', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Assam</button>
-        <button onclick="selectState('Bihar', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Bihar</button>
-        <button onclick="selectState('Kerala', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Kerala</button>
-        <button onclick="selectState('Gujarat', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Gujarat</button>
-        <button onclick="selectState('Tripura', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Tripura</button>
-        <button onclick="selectState('West Bengal', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">West Bengal</button>
-        <button onclick="selectState('Odisha', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Odisha</button>
-        <button onclick="selectState('Tamil Nadu', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Tamil Nadu</button>
-        <button onclick="selectState('Himachal Pradesh', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Himachal Pradesh</button>
-      </div>
-    </section>
+<section class="space-y-2">
+  <div class="flex items-center justify-between text-xs text-slate-500 px-1 font-semibold">
+    <span class="flex items-center gap-1.5">
+      <i data-lucide="map-pin" class="w-3.5 h-3.5 text-red-500"></i>
+      SELECT STATE
+    </span>
+    <span class="text-[11px] text-slate-400 flex items-center gap-1 font-normal">
+      Swipe or scroll <i data-lucide="arrow-right" class="w-3 h-3 text-slate-400"></i>
+    </span>
+  </div>
+  
+  <!-- Horizontal Scroll Container with custom scrollbar -->
+  <div class="flex items-center gap-2 overflow-x-auto pb-2 scroll-smooth custom-scroll-x">
+    <button onclick="selectState('ALL', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-red-600 bg-red-600 text-white shadow-sm flex-shrink-0">All States</button>
+    <button onclick="selectState('Assam', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Assam</button>
+    <button onclick="selectState('Bihar', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Bihar</button>
+    <button onclick="selectState('Kerala', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Kerala</button>
+    <button onclick="selectState('Gujarat', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Gujarat</button>
+    <button onclick="selectState('Tripura', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Tripura</button>
+    <button onclick="selectState('West Bengal', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">West Bengal</button>
+    <button onclick="selectState('Odisha', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Odisha</button>
+    <button onclick="selectState('Tamil Nadu', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Tamil Nadu</button>
+    <button onclick="selectState('Himachal Pradesh', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100 flex-shrink-0">Himachal Pradesh</button>
+  </div>
+</section>
 
     <!-- SEARCH BAR & CATEGORY BUTTONS -->
     <section class="space-y-3">
@@ -115,6 +124,26 @@
 
   </main>
 
+  <!-- DONATION RECORDING BANNER -->
+<section class="bg-gradient-to-r from-blue-900 to-slate-900 rounded-2xl p-4 sm:p-5 text-white shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+  <div class="space-y-1">
+    <div class="flex items-center gap-2 font-bold text-sm text-blue-200">
+      <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400"></i>
+      <span>Already Donated to Ground Relief?</span>
+    </div>
+    <p class="text-xs text-slate-300 max-w-xl leading-relaxed">
+      Help us measure ground impact and verify relief channels. Submit your contribution details privately.
+    </p>
+  </div>
+  <a 
+    href="YOUR_FORM_OR_SUPABASE_LINK_HERE" 
+    target="_blank" 
+    class="w-full sm:w-auto text-center px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs rounded-xl shadow transition-colors flex items-center justify-center gap-2 whitespace-nowrap flex-shrink-0">
+    <span>Fill Out</span>
+    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+  </a>
+</section>
+  
   <!-- PROFESSIONAL LEGAL FOOTER DISCLAIMER -->
   <footer class="mt-8 pt-6 border-t border-slate-200 max-w-4xl mx-auto w-full">
     <div class="bg-slate-100 border border-slate-200 rounded-2xl p-4 text-xs text-slate-600 leading-relaxed space-y-2 shadow-sm">
