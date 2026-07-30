@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NorthEast Relief Directory</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col justify-between py-6 px-4 sm:px-6 lg:px-8">
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-4xl mx-auto w-full space-y-6 flex-grow">
+    
+    <!-- HEADER SECTION -->
+    <header class="text-center space-y-2">
+      <div class="inline-flex items-center gap-2 bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+        Live Ground Support - NorthEast Crisis 2026
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        NORTHEAST RELIEF DIRECTORY
+      </h1>
+      <p class="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto">
+        Direct connection to official state funds, accredited NGOs, and active field volunteers across Northeast India.
+      </p>
+    </header>
+
+    <!-- STATE SELECTION SLIDER (HORIZONTAL SCROLL BAR) -->
+    <section class="space-y-2">
+      <div class="flex items-center justify-between text-xs text-slate-500 px-1 font-semibold">
+        <span>SELECT STATE</span>
+        <span class="text-[10px] text-slate-400">Scroll sideways $\rightarrow$</span>
+      </div>
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
+        <button onclick="selectState('ALL', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-red-600 bg-red-600 text-white shadow-sm">All States</button>
+        <button onclick="selectState('Assam', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Assam</button>
+        <button onclick="selectState('Arunachal Pradesh', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Arunachal Pradesh</button>
+        <button onclick="selectState('Manipur', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Manipur</button>
+        <button onclick="selectState('Meghalaya', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Meghalaya</button>
+        <button onclick="selectState('Mizoram', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Mizoram</button>
+        <button onclick="selectState('Nagaland', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Nagaland</button>
+        <button onclick="selectState('Sikkim', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Sikkim</button>
+        <button onclick="selectState('Tripura', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Tripura</button>
+      </div>
+    </section>
+
+    <!-- SEARCH BAR & CATEGORY BUTTONS -->
+    <section class="space-y-3">
+      <!-- Search Bar -->
+      <div class="relative">
+        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+        <input 
+          type="text" 
+          oninput="handleSearch(this)" 
+          placeholder="Search by organization name, district, or item focus (e.g. food, boat, Lakhimpur)..." 
+          class="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 shadow-sm">
+      </div>
+
+      <!-- Horizontal Category Bar -->
+      <div class="bg-slate-200/80 p-1.5 rounded-xl flex gap-1 sm:gap-2">
+        <button onclick="filterCategory('ALL', this)" class="tab-btn flex-1 py-2 px-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-white text-slate-900 shadow-sm flex items-center justify-center gap-1.5">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          <span>All</span>
+        </button>
+        <button onclick="filterCategory('government', this)" class="tab-btn flex-1 py-2 px-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 flex items-center justify-center gap-1.5">
+          <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+          <span>Government</span>
+        </button>
+        <button onclick="filterCategory('ngo', this)" class="tab-btn flex-1 py-2 px-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 flex items-center justify-center gap-1.5">
+          <i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i>
+          <span>NGOs</span>
+        </button>
+        <button onclick="filterCategory('grassroots', this)" class="tab-btn flex-1 py-2 px-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-slate-100/60 flex items-center justify-center gap-1.5">
+          <i data-lucide="users" class="w-3.5 h-3.5"></i>
+          <span>Grassroots</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- STATUTORY ADVISORY BOX -->
+    <section class="bg-amber-50 border-l-4 border-amber-500 text-amber-900 p-4 rounded-r-xl shadow-sm text-xs sm:text-sm">
+      <div class="flex items-center gap-2 font-bold text-amber-950 mb-1.5">
+        <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+        <span>⚠️ STATUTORY ADVISORY FOR DONORS</span>
+      </div>
+      <ol class="list-decimal list-inside space-y-1 text-amber-900 font-medium">
+        <li><strong>Grassroots First:</strong> Field volunteers face immediate cash crunch for food, water, and fuel.</li>
+        <li><strong>Verify Handles:</strong> Always cross-check linked Instagram/YouTube handles before transferring funds.</li>
+        <li><strong>No Middleman:</strong> This directory does not collect, hold, or process funds.</li>
+      </ol>
+    </section>
+
+    <!-- ENTITIES CONTAINER (FIXED SCROLL BOX) -->
+    <section class="space-y-2">
+      <div class="text-xs font-semibold text-slate-500 uppercase px-1">Active Relief Listings</div>
+      <div id="entitiesContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[520px] overflow-y-auto pr-1.5 custom-scroll">
+        <!-- Cards injected dynamically via script.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="mt-8 pt-6 border-t border-slate-200 text-center max-w-4xl mx-auto w-full space-y-2">
+    <p class="text-xs text-slate-500 leading-relaxed max-w-2xl mx-auto">
+      Nonprofit initiative developed by Annurag Das and the developer doesn't make any profit from any donations made and the developer won't be held accountable for donation to any malicious website.
+    </p>
+  </footer>
+
+  <!-- LINKED SCRIPT -->
+  <script src="./script.js"></script>
+</body>
+</html>
