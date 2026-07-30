@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "state": "Assam",
+    "category": "ngo",
+    "title": "Deeplina Deka Foundation",
+    "badge": "Humanitarian Organisation",
+    "verified": "Verified 11:56 AM, 30.07.26",
+    "area": "Flood-affected areas of Assam",
+    "focus": "Housing, medical assistance, food and hygiene kits.",
+    "proofUrl": "https://www.instagram.com/team.deeplina_official",
+    "donateUrl": "https://www.instagram.com/team.deeplina_official",
+    "upi": "eazypay.00000098444@icici",
+    "bank": {
+      "beneficiary": "7SIS MEDIA PRIVATE LIMITED",
+      "accountNo": "413605000391",
+      "ifsc": "ICIC0004136"
+    }
+  },
+  {
+    "id": 2,
+    "state": "Assam",
+    "category": "government",
+    "title": "Chief Minister's Relief Fund (CMRF Assam)",
+    "badge": "Official State Fund",
+    "verified": "Always Active",
+    "area": "Statewide - Assam",
+    "focus": "Emergency infrastructure, medical assistance, and large-scale state relief operations.",
+    "proofUrl": "https://cm.assam.gov.in",
+    "donateUrl": "https://cm.assam.gov.in",
+    "upi": "cmrfassam@sbi",
+    "bank": {
+      "beneficiary": "Chief Minister's Relief Fund Assam",
+      "accountNo": "35969660230",
+      "ifsc": "SBIN0010755"
+    }
+  },
+  {
+    "id": 3,
+    "state": "Assam",
+    "category": "ngo",
+    "title": "Assam Youth Action Network (AYAN)",
+    "badge": "Non-Governmental Organisation",
+    "verified": "Verified 01:26 PM, 30.07.26",
+    "area": "Flooded areas of Assam",
+    "focus": "Building houses and Rehabilitation of flood-affected people.",
+    "proofUrl": "https://www.instagram.com/ayanforassam",
+    "donateUrl": "https://truehopefoundation.in/life/assam-is-drowning-1000s-of-lives-need-your-urgent-help",
+    "upi": ""
+  },
+  {
+    "id": 4,
+    "state": "Assam",
+    "category": "ngo",
+    "title": "Oxfam India",
+    "badge": "Accredited NGO",
+    "verified": "Verified 01:32 PM, 30.07.26",
+    "area": "Cachar & Barpeta",
+    "focus": "Hygiene kit distribution, water purification tablets, and temporary shelter.",
+    "proofUrl": "https://www.instagram.com/oxfam_india",
+    "donateUrl": "https://donate.oxfamindia.org",
+    "upi": ""
+  },
+  {
+    "id": 5,
+    "state": "Assam",
+    "category": "grassroots",
+    "title": "Samay Gogoi, Assam",
+    "badge": "Grassroots Volunteer",
+    "verified": "Verified 01:32 PM, 30.07.26",
+    "area": "Remote Villages",
+    "focus": "Distributing food items, baby milk powder, and clean water packets via local country boats.",
+    "proofUrl": "https://www.instagram.com/samay_gogoi",
+    "donateUrl": "https://www.instagram.com/samay_gogoi",
+    "upi": ""
+  },
+  {
+    "id": 6,
+    "state": "Assam",
+    "category": "ngo",
+    "title": "Sachkhand Foundation",
+    "badge": "Youth Organisation",
+    "verified": "Verified 01:37 AM, 30.07.26",
+    "area": "Flood-hit areas",
+    "focus": "Food, medicine, basic items, clean drinking water and hygiene products.",
+    "proofUrl": "https://www.instagram.com/sachkhandfoundation",
+    "donateUrl": "https://www.instagram.com/sachkhandfoundation",
+    "upi": "sachkhandfoundation0473@icici"
+  },
+  {
+    "id": 7,
+    "state": "Assam",
+    "category": "ngo",
+    "title": "Aashray Foundation",
+    "badge": "Non-Profit Organisation",
+    "verified": "Verified 01:39 AM, 30.07.26",
+    "area": "Flood-affected areas",
+    "focus": "Food, medicine, basic items and boat rescue.",
+    "proofUrl": "https://www.instagram.com/aashrayngo",
+    "donateUrl": "https://www.instagram.com/aashrayngo",
+    "upi": "aashrayngo@ptyes",
+    "bank": {
+      "beneficiary": "SWB AASHRAY",
+      "accountNo": "159815151895",
+      "ifsc": "INDB0001023"
+    }
+  },
+  {
+    "id": 8,
+    "state": "Manipur",
+    "category": "government",
+    "title": "Chief Minister's Relief Fund (Manipur)",
+    "badge": "Official State Fund",
+    "verified": "Always Active",
+    "area": "Statewide - Manipur",
+    "focus": "Emergency relief and flood recovery across affected districts.",
+    "proofUrl": "https://manipur.gov.in",
+    "donateUrl": "https://manipur.gov.in",
+    "upi": "cmrfmanipur@sbi"
+  },
+  {
+    "id": 9,
+    "state": "Tripura",
+    "category": "government",
+    "title": "Chief Minister's Relief Fund (Tripura)",
+    "badge": "Official State Fund",
+    "verified": "Always Active",
+    "area": "Statewide - Tripura",
+    "focus": "Disaster rehabilitation and immediate emergency response.",
+    "proofUrl": "https://tripura.gov.in",
+    "donateUrl": "https://tripura.gov.in",
+    "upi": "cmrftripura@sbi"
+  }
+]
