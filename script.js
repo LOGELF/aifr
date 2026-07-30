@@ -3,7 +3,7 @@ let currentState = "ALL";
 let currentCategory = "ALL";
 let searchQuery = "";
 
-// Custom Scroll Bar Styles
+// Custom Scrollbar & Utility Styles
 const style = document.createElement('style');
 style.innerHTML = `
   .custom-scroll::-webkit-scrollbar { width: 6px; }
@@ -36,7 +36,7 @@ function applyFilters() {
   
   const filtered = entitiesData.filter(item => {
     // State Filter
-    const matchesState = (currentState === "ALL") || (item.state.toUpperCase() === currentState.toUpperCase());
+    const matchesState = (currentState === "ALL") || (item.state.toLowerCase() === currentState.toLowerCase());
     
     // Category Filter
     const matchesCategory = (currentCategory === "ALL") || (item.category.toLowerCase() === currentCategory.toLowerCase());
@@ -45,6 +45,7 @@ function applyFilters() {
     const query = searchQuery.toLowerCase().trim();
     const matchesSearch = query === "" || 
       item.title.toLowerCase().includes(query) ||
+      item.state.toLowerCase().includes(query) ||
       item.area.toLowerCase().includes(query) ||
       item.focus.toLowerCase().includes(query) ||
       item.badge.toLowerCase().includes(query);
