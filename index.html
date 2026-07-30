@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NorthEast Relief Directory</title>
+  <title>AIFR - All India Flood Relief Directory</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -27,13 +27,13 @@
     <header class="text-center space-y-2">
       <div class="inline-flex items-center gap-2 bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
         <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-        Live Ground Support - NorthEast Crisis 2026
+        AIFR • Live Ground Support India
       </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-        NORTHEAST RELIEF DIRECTORY
+        ALL INDIA FLOOD RELIEF (AIFR)
       </h1>
       <p class="text-slate-600 text-xs sm:text-sm max-w-2xl mx-auto">
-        Direct connection to official state funds, accredited NGOs, and active field volunteers across Northeast India.
+        One verified directory connecting you directly with state funds, accredited NGOs, and active ground volunteers across India.
       </p>
     </header>
 
@@ -46,13 +46,14 @@
       <div class="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
         <button onclick="selectState('ALL', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-red-600 bg-red-600 text-white shadow-sm">All States</button>
         <button onclick="selectState('Assam', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Assam</button>
-        <button onclick="selectState('Arunachal Pradesh', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Arunachal Pradesh</button>
-        <button onclick="selectState('Manipur', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Manipur</button>
-        <button onclick="selectState('Meghalaya', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Meghalaya</button>
-        <button onclick="selectState('Mizoram', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Mizoram</button>
-        <button onclick="selectState('Nagaland', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Nagaland</button>
-        <button onclick="selectState('Sikkim', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Sikkim</button>
+        <button onclick="selectState('Bihar', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Bihar</button>
+        <button onclick="selectState('Kerala', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Kerala</button>
+        <button onclick="selectState('Gujarat', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Gujarat</button>
         <button onclick="selectState('Tripura', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Tripura</button>
+        <button onclick="selectState('West Bengal', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">West Bengal</button>
+        <button onclick="selectState('Odisha', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Odisha</button>
+        <button onclick="selectState('Tamil Nadu', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Tamil Nadu</button>
+        <button onclick="selectState('Himachal Pradesh', this)" class="state-btn whitespace-nowrap px-4 py-2 text-xs font-semibold rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-100">Himachal Pradesh</button>
       </div>
     </section>
 
@@ -64,7 +65,7 @@
         <input 
           type="text" 
           oninput="handleSearch(this)" 
-          placeholder="Search by organization name, district, or item focus (e.g. food, boat, Lakhimpur)..." 
+          placeholder="Search by state, organization name, district, or relief items..." 
           class="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500/20 focus:border-red-500 shadow-sm">
       </div>
 
@@ -96,7 +97,7 @@
         <span>⚠️ STATUTORY ADVISORY FOR DONORS</span>
       </div>
       <ol class="list-decimal list-inside space-y-1 text-amber-900 font-medium">
-        <li><strong>Grassroots First:</strong> Field volunteers face immediate cash crunch for food, water, and fuel.</li>
+        <li><strong>Grassroots First:</strong> Field volunteers face immediate cash crunch for food, water, and emergency boat fuel.</li>
         <li><strong>Verify Handles:</strong> Always cross-check linked Instagram/YouTube handles before transferring funds.</li>
         <li><strong>No Middleman:</strong> This directory does not collect, hold, or process funds.</li>
       </ol>
@@ -115,7 +116,7 @@
   <!-- FOOTER SECTION -->
   <footer class="mt-8 pt-6 border-t border-slate-200 text-center max-w-4xl mx-auto w-full space-y-2">
     <p class="text-xs text-slate-500 leading-relaxed max-w-2xl mx-auto">
-      Nonprofit initiative developed by Annurag Das and the developer doesn't make any profit from any donations made and the developer won't be held accountable for donation to any malicious website.
+      nonprofit initiative developed by annurag das and the developer doesnt make any profit from any donations made and the developer wont be held accountable for donation to any malicious website.
     </p>
   </footer>
 
